@@ -8,10 +8,10 @@ ENV TZ=Asia/Shanghai
 ENV DBIP 127.0.0.1
 ENV DBPort 3306
 ENV DBUser root
-ENV DBPassword password
+ENV DBPassword My@Docker
 
 # Mysql里tars用户的密码，缺省为tars2015
-ENV DBTarsPass tars2015
+ENV DBTarsPass My@Docker
 
 ##安装
 RUN yum -y install https://repo.mysql.com/mysql57-community-release-el7-11.noarch.rpm \
@@ -91,7 +91,7 @@ ENV JAVA_HOME /usr/java/jdk-10.0.1
 ENV MAVEN_HOME /usr/local/apache-maven-3.5.3
 
 # 是否将Tars系统进程的data目录挂载到外部存储，缺省为false以支持windows下使用
-ENV MOUNT_DATA false
+ENV MOUNT_DATA true
 
 # 网络接口名称，如果运行时使用 --net=host，宿主机网卡接口可能不叫 eth0
 ENV INET_NAME eth0
